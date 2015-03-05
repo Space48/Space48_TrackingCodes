@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config>
+    <placeholders>
+        <criteo_tag_block_email>
+            <block>space48_trackingcodes/email</block>
+            <placeholder>TRACKING_CODES_CRITEO_EMAIL</placeholder>
+            <container>Space48_TrackingCodes_Model_Container</container>
+            <cache_lifetime>NULL</cache_lifetime>
+        </criteo_tag_block_email>
+    </placeholders>
+</config>

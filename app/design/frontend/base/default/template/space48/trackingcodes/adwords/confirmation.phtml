@@ -1,0 +1,18 @@
+<?php if(Mage::helper('space48_trackingcodes')->getAdwordsConfig('enabled')): ?>
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = <?php echo Mage::helper('space48_trackingcodes')->getAdwordsConfig('conversionid') ?>;
+    var google_conversion_language = "en";
+    var google_conversion_format = "1";
+    var google_conversion_color = "666666";
+    var google_conversion_label = "purchase";
+    var google_conversion_value = "1";
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/<?php echo Mage::helper('space48_trackingcodes')->getAdwordsConfig('conversionid') ?>/?label=purchase&guid=ON&script=0"/>
+            </div>
+    </noscript>
+<?php endif; ?>

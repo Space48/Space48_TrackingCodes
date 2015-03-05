@@ -1,0 +1,3 @@
+<?php if(Mage::helper('space48_trackingcodes')->getBingConfig('enabled')): ?>
+    <?php echo Mage::getModel('space48_trackingcodes/bing')->getBingCode() ?>
+<?php endif; ?>
