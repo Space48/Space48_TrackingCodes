@@ -21,7 +21,7 @@ class Space48_TrackingCodes_Block_Criteo_List extends Space48_TrackingCodes_Bloc
             }
         }
         
-        return json_encode($productSkus);
+        return $productSkus;
     }
     
     /**

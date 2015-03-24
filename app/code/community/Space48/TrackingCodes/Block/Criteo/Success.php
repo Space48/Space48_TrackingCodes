@@ -5,8 +5,6 @@ class Space48_TrackingCodes_Block_Criteo_Success extends Space48_TrackingCodes_B
     /**
      * get confirmation params
      * 
-     * @todo this should be utilising "json_encode"
-     * 
      * @return string
      */
 	public function getConfirmationParams()
@@ -16,16 +14,16 @@ class Space48_TrackingCodes_Block_Criteo_Success extends Space48_TrackingCodes_B
         if ( $order = $this->getLastOrder() ) {
             foreach ( $order->getAllVisibleItems() as $item ) {
                 if ( ! $item->getParentItem() ) {
-                    $trackingLines[] = json_encode(array(
+                    $trackingLines[] = array(
                         'id'       => $item->getSku(),
                         'price'    => number_format($item->getData('price_incl_tax'), '2', '.', '.'),
                         'quantity' => $item->getQtyOrdered() * 1,
-                    ));
+                    );
                 }
             }
         }
         
-        return join(',', $trackingLines);
+        return $trackingLines;
 	}
     
     /**

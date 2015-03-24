@@ -14,16 +14,16 @@ class Space48_TrackingCodes_Block_Criteo_Cart extends Space48_TrackingCodes_Bloc
         if ( $cart = $this->getCart() ) {
             foreach ( $cart->getItems() as $item ) {
                 if ( ! $item->getParentItem() ) {
-                    $trackingLines[] = json_encode(array(
+                    $trackingLines[] = array(
                         'id'       => $item->getSku(),
                         'price'    => number_format($item->getData('price_incl_tax'), '2', '.', '.'),
                         'quantity' => $item->getQty() * 1,
-                    ));
+                    );
                 }
             }
         }
         
-        return join(',', $trackingLines);
+        return $trackingLines;
 	}
     
     /**
