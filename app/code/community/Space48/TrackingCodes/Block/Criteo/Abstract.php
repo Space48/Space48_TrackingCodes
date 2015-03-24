@@ -7,7 +7,7 @@ abstract class Space48_TrackingCodes_Block_Criteo_Abstract extends Space48_Track
      *
      * @var string
      */
-	protected $_configName = 'criteo';
+    protected $_configName = 'criteo';
     
     /**
      * holds event data
@@ -15,7 +15,7 @@ abstract class Space48_TrackingCodes_Block_Criteo_Abstract extends Space48_Track
      * @var array
      */
     protected $_eventData = array();
-	
+    
     /**
      * constructor
      */
@@ -59,10 +59,10 @@ abstract class Space48_TrackingCodes_Block_Criteo_Abstract extends Space48_Track
      *
      * @return string
      */
-	public function getAccountId()
-	{
-		return $this->getConfigValue('accountid');	
-	}
+    public function getAccountId()
+    {
+        return $this->getConfigValue('accountid');  
+    }
     
     /**
      * get site type
@@ -81,10 +81,10 @@ abstract class Space48_TrackingCodes_Block_Criteo_Abstract extends Space48_Track
      *
      * @return string
      */
-	public function getEmail()
-	{
-		return $this->getConfigValue('email');	
-	}
+    public function getEmail()
+    {
+        return $this->getConfigValue('email');  
+    }
     
     /**
      * get event data

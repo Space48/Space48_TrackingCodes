@@ -7,9 +7,9 @@ class Space48_TrackingCodes_Block_Criteo_Success extends Space48_TrackingCodes_B
      * 
      * @return string
      */
-	public function getConfirmationParams()
-	{
-		$trackingLines = array();
+    public function getConfirmationParams()
+    {
+        $trackingLines = array();
         
         if ( $order = $this->getLastOrder() ) {
             foreach ( $order->getAllVisibleItems() as $item ) {
@@ -24,7 +24,7 @@ class Space48_TrackingCodes_Block_Criteo_Success extends Space48_TrackingCodes_B
         }
         
         return $trackingLines;
-	}
+    }
     
     /**
      * get event data

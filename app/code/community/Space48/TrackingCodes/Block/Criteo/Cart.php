@@ -7,9 +7,9 @@ class Space48_TrackingCodes_Block_Criteo_Cart extends Space48_TrackingCodes_Bloc
      * 
      * @return string
      */
-	public function getCartParams()
-	{
-		$trackingLines = array();
+    public function getCartParams()
+    {
+        $trackingLines = array();
         
         if ( $cart = $this->getCart() ) {
             foreach ( $cart->getItems() as $item ) {
@@ -24,7 +24,7 @@ class Space48_TrackingCodes_Block_Criteo_Cart extends Space48_TrackingCodes_Bloc
         }
         
         return $trackingLines;
-	}
+    }
     
     /**
      * get event data
