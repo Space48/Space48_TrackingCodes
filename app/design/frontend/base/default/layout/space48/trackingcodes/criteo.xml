@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    
+    <!-- category page -->
+    <catalog_category_view>
+        <reference name="before_body_end">
+            <block ifconfig="s48trackingcodes/criteo/enabled" type="space48_trackingcodes/criteo_list" name="criteo_list" as="criteo_list" />
+        </reference>
+    </catalog_category_view>
+    
+    <!-- search results page -->
+    <catalogsearch_result_index>
+        <reference name="before_body_end">
+            <block ifconfig="s48trackingcodes/criteo/enabled" type="space48_trackingcodes/criteo_list" name="criteo_search_list" as="criteo_search_list" />
+        </reference>
+    </catalogsearch_result_index>
+    
+    <!-- product page -->
+    <catalog_product_view>
+        <reference name="before_body_end">
+            <block ifconfig="s48trackingcodes/criteo/enabled" type="space48_trackingcodes/criteo_product" name="criteo_product" as="criteo_product" />
+        </reference>
+    </catalog_product_view>
+    
+    <!-- cart/basket page -->
+    <checkout_cart_index>
+        <reference name="before_body_end">
+            <block ifconfig="s48trackingcodes/criteo/enabled" type="space48_trackingcodes/criteo_cart" name="criteo_cart" as="criteo_cart" />
+        </reference>
+    </checkout_cart_index>
+    
+    <!-- checkout success page -->
+    <checkout_onepage_success>
+        <reference name="before_body_end">
+            <block ifconfig="s48trackingcodes/criteo/enabled" type="space48_trackingcodes/criteo_success" name="criteo_success" as="criteo_success" />
+        </reference>
+    </checkout_onepage_success>
+</layout>

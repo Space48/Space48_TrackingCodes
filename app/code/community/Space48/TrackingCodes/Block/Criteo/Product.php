@@ -12,5 +12,21 @@ class Space48_TrackingCodes_Block_Criteo_Product extends Space48_TrackingCodes_B
                 return $product->getSku();
             }
         }
-	}	
+	}
+    
+    /**
+     * get event data
+     *
+     * @return array
+     */
+    protected function _getEventData()
+    {
+        // set account
+        $this->_eventData['viewItem'] = array(
+            'event' => 'viewItem',
+            'item'  => $this->getCurrentProductId(),
+        );
+        
+        return parent::_getEventData();
+    }
 }
