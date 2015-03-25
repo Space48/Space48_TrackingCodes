@@ -5,21 +5,60 @@
             <version>0.1.0</version>
         </Space48_TrackingCodes>
     </modules>
-    
+    <global>
+        <blocks>
+            <space48_trackingcodes>
+                <class>Space48_TrackingCodes_Block</class>
+            </space48_trackingcodes>
+        </blocks>
+        <helpers>
+            <space48_trackingcodes>
+                <class>Space48_TrackingCodes_Helper</class>
+            </space48_trackingcodes>
+        </helpers>
+        <models>
+            <space48_trackingcodes>
+                <class>Space48_TrackingCodes_Model</class>
+            </space48_trackingcodes>
+        </models>
+    </global>
     <frontend>
         <layout>
             <updates>
-                <!-- module default -->
-                <s48_trackingcodes>
-                    <file>space48/trackingcodes.xml</file>
-                </s48_trackingcodes>
-                
-                <!-- criteo specific -->
+                <s48_trackingcodes_remarketing>
+                    <file>space48/trackingcodes/remarketing.xml</file>
+                </s48_trackingcodes_remarketing>
                 <s48_trackingcodes_criteo>
                     <file>space48/trackingcodes/criteo.xml</file>
                 </s48_trackingcodes_criteo>
+                <s48_trackingcodes_bing>
+                    <file>space48/trackingcodes/bing.xml</file>
+                </s48_trackingcodes_bing>
+                <s48_trackingcodes_adwords>
+                    <file>space48/trackingcodes/adwords.xml</file>
+                </s48_trackingcodes_adwords>
             </updates>
         </layout>
     </frontend>
-    
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <s48trackingcodes>
+                                            <title>Space 48 Tracking Codes - All</title>
+                                        </s48trackingcodes>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>   
 </config>

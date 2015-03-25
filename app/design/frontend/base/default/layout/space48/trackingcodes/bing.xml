@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <checkout_onepage_success>
+        <reference name="before_body_end">
+            <block ifconfig="s48trackingcodes/bing/enabled" type="space48_trackingcodes/bing_success" name="bing_success" />
+        </reference>
+    </checkout_onepage_success>
+</layout>

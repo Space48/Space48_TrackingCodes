@@ -11,7 +11,7 @@ class Space48_TrackingCodes_Block_Criteo_Cart extends Space48_TrackingCodes_Bloc
     {
         $trackingLines = array();
         
-        if ( $cart = $this->getCart() ) {
+        if ( $cart = $this->getCartHelper()->getCart() ) {
             foreach ( $cart->getItems() as $item ) {
                 if ( ! $item->getParentItem() ) {
                     $trackingLines[] = array(

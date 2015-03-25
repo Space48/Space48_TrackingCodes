@@ -1,6 +1,6 @@
 <?php
 
-class Space48_TrackingCodes_Block_Criteo_Product extends Space48_TrackingCodes_Block_Criteo_Abstract
+class Space48_TrackingCodes_Block_Criteo_Home extends Space48_TrackingCodes_Block_Criteo_Abstract
 {
     /**
      * get event data

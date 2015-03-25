@@ -83,7 +83,7 @@
                     </fields>
                 </bing>
 
-                <gadwords translate="label" module="space48_trackingcodes">
+                <adwords translate="label" module="space48_trackingcodes">
                     <label>Adwords Conversion Tracking</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>1200</sort_order>
@@ -110,9 +110,9 @@
                             <show_in_store>1</show_in_store>
                         </conversionid>
                     </fields>
-                </gadwords>
+                </adwords>
 
-                <gremarketing translate="label" module="space48_trackingcodes">
+                <remarketing translate="label" module="space48_trackingcodes">
                     <label>Google Remarketing Settings</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>1300</sort_order>
@@ -140,7 +140,7 @@
                             <show_in_store>1</show_in_store>
                         </accountid>
                     </fields>
-                </gremarketing>
+                </remarketing>
             </groups>
         </s48trackingcodes>
     </sections>   
