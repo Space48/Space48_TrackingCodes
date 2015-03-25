@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Space48_TrackingCodes>
+            <version>0.1.0</version>
+        </Space48_TrackingCodes>
+    </modules>
+    
+    <frontend>
+        <layout>
+            <updates>
+                <!-- module default -->
+                <s48_trackingcodes>
+                    <file>space48/trackingcodes.xml</file>
+                </s48_trackingcodes>
+                
+                <!-- criteo specific -->
+                <s48_trackingcodes_criteo>
+                    <file>space48/trackingcodes/criteo.xml</file>
+                </s48_trackingcodes_criteo>
+            </updates>
+        </layout>
+    </frontend>
+    
+</config>

@@ -2,21 +2,44 @@
 
 class Space48_TrackingCodes_Block_Criteo_Success extends Space48_TrackingCodes_Block_Criteo_Abstract
 {
-	public function getLastOrderId()
-	{
-		return Mage::getSingleton('checkout/session')->getLastRealOrderId();
-	}
-
-	public function getConfirmationParams()
-	{
-		$trackingLines = array();
-        if ($lastOrder = Mage::getModel('sales/order')->loadByIncrementId(Mage::getSingleton('checkout/session')->getLastRealOrderId())) {
-            foreach ($lastOrder->getAllVisibleItems() as $item) {
-                if (!$item->getParentItem()) {
-                    $trackingLines[] = '{ id: "'.$item->getSku().'", price: '.number_format($item->getData('price_incl_tax'), '2', '.', '.').', quantity: '.(int)$item->getQtyOrdered().' }';
+    /**
+     * get confirmation params
+     * 
+     * @return string
+     */
+    public function getConfirmationParams()
+    {
+        $trackingLines = array();
+        
+        if ( $order = $this->getLastOrder() ) {
+            foreach ( $order->getAllVisibleItems() as $item ) {
+                if ( ! $item->getParentItem() ) {
+                    $trackingLines[] = array(
+                        'id'       => $item->getSku(),
+                        'price'    => number_format($item->getData('price_incl_tax'), '2', '.', '.'),
+                        'quantity' => $item->getQtyOrdered() * 1,
+                    );
                 }
             }
         }
-        return join(", \r\n", $trackingLines);
-	}
+        
+        return $trackingLines;
+    }
+    
+    /**
+     * get event data
+     *
+     * @return array
+     */
+    protected function _getEventData()
+    {
+        // set account
+        $this->_eventData['trackTransaction'] = array(
+            'event' => 'trackTransaction',
+            'id'    => $this->getLastOrderId(),
+            'item'  => $this->getConfirmationParams(),
+        );
+        
+        return parent::_getEventData();
+    }
 }

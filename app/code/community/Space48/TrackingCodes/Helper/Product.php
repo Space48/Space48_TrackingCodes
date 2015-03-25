@@ -2,9 +2,9 @@
 
 class Space48_TrackingCodes_Helper_Product extends Mage_Core_Helper_Abstract
 {
-	public function getFirstInStockSimple(Mage_Catalog_Model_Product $product)
-	{
-		$fallBack = array();
+    public function getFirstInStockSimple(Mage_Catalog_Model_Product $product)
+    {
+        $fallBack = array();
         $simpleCollectionIds = $product->getTypeInstance()->getUsedProductIds();
         $simpleBluePrint = Mage::getModel('catalog/product');
         foreach ($simpleCollectionIds as $productId) {
@@ -22,5 +22,5 @@ class Space48_TrackingCodes_Helper_Product extends Mage_Core_Helper_Abstract
             }
         }
         return reset($fallBack);
-	}
+    }
 }
