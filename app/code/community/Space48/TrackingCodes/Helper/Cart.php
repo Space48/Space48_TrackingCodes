@@ -13,6 +13,17 @@ class Space48_TrackingCodes_Helper_Cart extends Mage_Core_Helper_Abstract
         return Mage::getModel('checkout/cart');
     }
 
+
+    /**
+     * get cart total
+     *
+     * @return float
+     */
+    public function getCartTotal()
+    {
+        return $this->getQuote()->getGrandTotal();
+    }
+
     /**
      * get current quote
      *

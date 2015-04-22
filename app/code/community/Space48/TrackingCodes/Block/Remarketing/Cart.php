@@ -13,6 +13,6 @@ class Space48_TrackingCodes_Block_Remarketing_Cart extends Space48_TrackingCodes
 
     public function getTotalValue()
     {
-        return $this->getCheckoutHelper()->getLastOrder()->getGrandTotal();
+        return $this->getCartHelper()->getCartTotal();
     }
 }

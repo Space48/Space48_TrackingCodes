@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-    <tabs>
-        <space48adminconf translate="label" module="space48_trackingcodes">
-            <label>Space 48</label>
-            <sort_order>48</sort_order>
-        </space48adminconf>
-    </tabs>
     <sections>
         <s48trackingcodes translate="label" module="space48_trackingcodes">
             <label>Tracking Codes</label>
-            <tab>space48adminconf</tab>
+            <tab>space48</tab>
             <frontend_type>text</frontend_type>
             <sort_order>0</sort_order>
             <show_in_default>1</show_in_default>
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>
             <groups>
-                <criteo translate="label" module="space48_trackingcodes">
+                <!-- <criteo translate="label" module="space48_trackingcodes">
                     <label>Criteo Settings</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>1000</sort_order>
@@ -110,7 +104,7 @@
                             <show_in_store>1</show_in_store>
                         </conversionid>
                     </fields>
-                </adwords>
+                </adwords> -->
 
                 <remarketing translate="label" module="space48_trackingcodes">
                     <label>Google Remarketing Settings</label>
@@ -141,6 +135,65 @@
                         </accountid>
                     </fields>
                 </remarketing>
+
+                <imrg translate="label" module="space48_trackingcodes">
+                    <label>IMRG Peermap Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1400</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <comment>Enable or disable IMRG Peermap codes</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </enabled>
+                        <accountid translate="label">
+                            <label>API key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </accountid>
+                    </fields>
+                </imrg>
+
+                <reevoo translate="label" module="space48_trackingcodes">
+                    <label>Reevoo Tracking Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1500</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <comment>Enable or disable the Reevoo tracking codes</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </enabled>
+                        <trkref translate="label">
+                            <label>Tracking ref</label>
+                            <comment>Add your Reevoo tracking ref here</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </trkref>
+                    </fields>
+                </reevoo>
             </groups>
         </s48trackingcodes>
     </sections>   

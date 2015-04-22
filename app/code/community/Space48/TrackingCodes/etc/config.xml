@@ -21,6 +21,17 @@
                 <class>Space48_TrackingCodes_Model</class>
             </space48_trackingcodes>
         </models>
+        <events>
+            <checkout_cart_product_add_after>
+                <observers>
+                    <imrg_track_add_to_cart>
+                        <type>singleton</type>
+                        <class>Space48_TrackingCodes_Model_Imrg_Observer</class>
+                        <method>trackAddToCart</method>
+                    </imrg_track_add_to_cart>
+                </observers>
+            </checkout_cart_product_add_after>     
+        </events>
     </global>
     <frontend>
         <layout>
@@ -37,6 +48,12 @@
                 <s48_trackingcodes_adwords>
                     <file>space48/trackingcodes/adwords.xml</file>
                 </s48_trackingcodes_adwords>
+                <s48_trackingcodes_imrg>
+                    <file>space48/trackingcodes/imrg.xml</file>
+                </s48_trackingcodes_imrg>
+                <s48_trackingcodes_reevoo>
+                    <file>space48/trackingcodes/reevoo.xml</file>
+                </s48_trackingcodes_reevoo>
             </updates>
         </layout>
     </frontend>

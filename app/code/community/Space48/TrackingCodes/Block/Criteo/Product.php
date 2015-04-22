@@ -4,7 +4,7 @@ class Space48_TrackingCodes_Block_Criteo_Product extends Space48_TrackingCodes_B
 {
     public function getCurrentProductId()
     {
-        if ($product = $this->getCurrentProduct()) {
+        if ($product = $this->getProductHelper()->getCurrentProduct()) {
             if ($product->getTypeId() == Mage_Catalog_Model_Product_Type::TYPE_CONFIGURABLE) {
                 $simpleInStock = $this->getProductHelper()->getFirstInStockSimple();
                 return $simpleInStock->getSku();

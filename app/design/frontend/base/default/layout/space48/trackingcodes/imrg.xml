@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <block ifconfig="s48trackingcodes/imrg/enabled" type="space48_trackingcodes/imrg_default" name="imrg_default" />
+        </reference>
+    </default>
+    <checkout_onepage_success>
+        <reference name="before_body_end">
+            <block ifconfig="s48trackingcodes/imrg/enabled" type="space48_trackingcodes/imrg_success" name="imrg_success" />
+        </reference>
+    </checkout_onepage_success>
+    <checkout_cart_index>
+        <reference name="before_body_end">
+            <block ifconfig="s48trackingcodes/imrg/enabled" type="space48_trackingcodes/imrg_cart" name="imrg_cart" />
+        </reference>
+    </checkout_cart_index>
+    <checkout_onepage_index>
+        <reference name="before_body_end">
+            <block ifconfig="s48trackingcodes/imrg/enabled" type="space48_trackingcodes/imrg_checkout" name="imrg_checkout" />
+        </reference>
+    </checkout_onepage_index>
+</layout>

@@ -1,0 +1,19 @@
+<?php if ($this->getCanShow()): ?>
+
+<script id="reevoomark-loader" type="text/javascript" charset="utf-8">
+    (function() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'http://cdn.mark.reevoo.com/assets/reevoo_mark.js';
+        var s = document.getElementById('reevoomark-loader');
+        s.parentNode.insertBefore(script, s);
+    })();
+
+    afterReevooMarkLoaded = [function(){
+        ReevooApi.load('<?php echo $this->getTrackingReference(); ?>', function(retailer){
+            retailer.track_purchase([<?php echo $this->getItemSkus(); ?>], "<?php echo $this->getOrderTotal(); ?>");
+        });
+    }];
+</script>
+
+<?php endif; ?>

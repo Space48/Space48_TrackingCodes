@@ -13,7 +13,11 @@ class Space48_TrackingCodes_Block_Criteo_List extends Space48_TrackingCodes_Bloc
     {
         $productsCount = 0;
         $productSkus = array();
-        foreach ($this->getLoadedProductCollection() as $product) {
+        $collection = Mage::getModel('catalog/product')
+            ->getCollection()
+            ->addAttributeToSelect('sku')
+            ->addCategoryFilter(Mage::registry('current_category'));
+        foreach ($collection as $product) {
             $productSkus[] = '"' . $product->getSku() . '"';
             $productsCount++;
             if ($productsCount >= (int)$limit) {

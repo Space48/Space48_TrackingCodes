@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<checkout_onepage_success>
+        <reference name="head">
+            <block ifconfig="space48_trackingcodes/reevoo/enabled" type="space48_trackingcodes/reevoo_confirmation" name="reevoo_confirmation" />
+        </reference>
+    </checkout_onepage_success>    
+</layout>

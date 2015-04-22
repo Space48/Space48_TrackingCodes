@@ -21,6 +21,6 @@ class Space48_TrackingCodes_Helper_Checkout extends Mage_Core_Helper_Abstract
      */
     public function getLastOrder()
     {
-        return Mage::getModel('sales/order')->load($this->getLastOrderId());
+        return Mage::getModel('sales/order')->loadByIncrementId($this->getLastOrderId());
     }
 }

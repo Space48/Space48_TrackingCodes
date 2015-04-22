@@ -6,7 +6,7 @@
             ecomm_pagetype: '<?php echo $this->getPageType() ?>',
             ecomm_totalvalue: '<?php echo $this->getTotalValue() ?>'
         };
-        var google_conversion_id = <?php $this->getAccountId() ?>;
+        var google_conversion_id = <?php echo $this->getAccountId() ?>;
         var google_custom_params = window.google_tag_params;
         var google_remarketing_only = true;
         /* ]]> */
