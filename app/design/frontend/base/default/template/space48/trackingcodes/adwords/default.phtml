@@ -1,16 +1,18 @@
+<?php
+$conversionId = $this->getFieldValue('conversionid'); ?>
 <script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = <?php echo $this->getConversionId() ?>;
-var google_conversion_language = "en";
-var google_conversion_format = "1";
-var google_conversion_color = "666666";
-var google_conversion_label = "purchase";
-var google_conversion_value = "1";
-/* ]]> */
+    /* <![CDATA[ */
+    var google_conversion_id = <?php echo $conversionId; ?>;
+    var google_conversion_language = "en";
+    var google_conversion_format = <?php echo $this->getFieldValue('conversionformat'); ?>;
+    var google_conversion_color = <?php echo $this->getFieldValue('conversioncolor'); ?>;
+    var google_conversion_label = <?php echo $this->getFieldValue('conversionlabel'); ?>;
+    var google_conversion_value = "1";
+    /* ]]> */
 </script>
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
 <noscript>
     <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/<?php echo $this->getConversionId() ?>/?label=purchase&guid=ON&script=0"/>
+        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/<?php echo $conversionId; ?>/?value=1&conversion_currency=GBP&amp;label=<?php echo $this->getFieldValue('conversionlabel'); ?>&amp;guid=ON&amp;script=0"/>
     </div>
 </noscript>

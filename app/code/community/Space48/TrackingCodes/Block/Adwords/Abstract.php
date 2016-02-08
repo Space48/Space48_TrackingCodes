@@ -27,6 +27,11 @@ abstract class Space48_TrackingCodes_Block_Adwords_Abstract extends Space48_Trac
         return $this->getConfigValue('conversionid');
     }
 
+    public function getFieldValue($field)
+    {
+        return $this->getConfigValue($field);
+    }
+
     /**
      * is enabled
      *

@@ -1,6 +1,6 @@
 # Space48_TrackingCodes
 
-* Google AddWords
+* Google AdWords
 * Google ReMarketing
 * Bing
 * Criteo
